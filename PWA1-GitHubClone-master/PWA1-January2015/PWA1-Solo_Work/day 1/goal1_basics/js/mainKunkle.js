@@ -169,7 +169,7 @@
 
     //this decrements after it is used
     num--;//started out as 10 basic math.
-    console.log("-- POST decrement Counter:", num);//8
+    console.log("-- POST decrement Counter:", num);//8  
     document.write("<br>" + "-- POST decrement Counter:", num); //8
 
 
