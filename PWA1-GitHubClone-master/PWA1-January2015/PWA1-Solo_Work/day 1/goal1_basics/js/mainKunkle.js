@@ -182,16 +182,30 @@
 
     //add a number to a string is always a string
     var myStr = "6" + 2;
-    console.log("number + String")
+    console.log("number + String");
 
 
     //other math operations will result in a number
+    var myStr1 =  '6' / 2;
+    console.log("Number / String:", myStr1);
+    document.write("<br>" + "Number / String:", myStr1);
+
+
 
 
     //order of operations: ( ), *, /, +, -
+    var num4 = 4 + (6 * 5 - 10) / 5;
+    console.log("order of operations", num4);
+    document.write("<br>" + "Order of operations", num4);
+
 
 
     //modulo example
+    var num5 = 10;
+    var num6 = 3;
+    console.log("remainder", num5%num6);
+    document.write("<br>" + "Remainder", num5%num6);
+
 
 
 // arrays: (definition, indexing, getter/setter)
@@ -212,6 +226,15 @@
      */
     var myArr = ['bond', 007, function () {
     }, true];
+    console.log("index 0 ", [0]);
+    console.log("index 1 ", [1]);
+    console.log("index 2 ", [2]);
+    console.log("index 3 ", [3]);
+    document.write("<br>" + "index 0 " [0]);
+    document.write("<br>" + "index 1 " [1]);
+    document.write("<br>" + "index 2 " [2]);
+    document.write("<br>" + "index 3 " [3]);
+
 
     /*
      - arrays can hold any value type, separated by comma
@@ -222,14 +245,18 @@
     //arrays can hold any data type
 
 
-    /*******************************************
 
-     STUDENT ACTIVITY 1:
 
-     1.  create an array with 4 numbers 10, 50, 100, 200
-     2.  console.log the sum of all the numbers in an array
+    // STUDENT ACTIVITY 1:
 
-     ********************************************/
+    //1.  create an array with 4 numbers 10, 50, 100, 200
+    //2.  console.log the sum of all the numbers in an array
+
+    var list = [10, 50, 100, 200];
+    console.log("sum of array ", list[0]+list[1]+list[2]+list[3]);
+    document.write("<br>" + "sum of array ", list[0]+list[1]+list[2]+list[3]);
+
+
 
 
     /*******************************************
@@ -246,6 +273,13 @@
      3. output array items using string concatenation
 
      ********************************************/
+      var myArray = new Array ();
+    myArray[0] = "baseball";
+    myArray[1] = "football";
+    myArray[2] = "basketball";
+    alert(myArray[0] + [1] + [2]);
+    //alert(myArray);
+
 
 
         // conditionals: (definition, indexing, math, if, if-else, if-else if, ternary)
@@ -310,6 +344,8 @@
      */
 
     // == performs a loose check of two values
+
+
 
 
     /* ==============================================================
