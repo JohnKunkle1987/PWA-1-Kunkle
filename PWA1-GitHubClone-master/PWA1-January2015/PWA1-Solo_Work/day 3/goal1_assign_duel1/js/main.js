@@ -26,14 +26,14 @@
     function fight(){                   //names the function Fight
         console.log ('in the fight function');   //console.logs in the fight function
 
-        alert(playerOneName+":"+playerOneHealth+"  *START*  "+playerTwoName+":"+playerTwoHealth);
-
-        for (var i=0; i < 10; i++){
+        alert(playerOneName+":"+playerOneHealth+"  *START*  "+playerTwoName+":"+playerTwoHealth);//sends alert with player
+                                                             //names and calls the name variables
+        for (var i=0; i < 10; i++){ //sets the the counter runs until "i" is 10
 
             //random formula is - Math.floor(Math.random() * (max - min) + min);
 
-            var minDamage1 = player1Damage * .5;
-            var minDamage2 = player2Damage * .5;
+            var minDamage1 = player1Damage * .5;    //sets minDamage to playerdXdamage to # * .5
+            var minDamage2 = player2Damage * .5;    //sets minDamage to playerdXdamage to # * .5
             var f1 = Math.floor(Math.random()*(player1Damage-minDamage1)+minDamage1);
             var f2 = Math.floor(Math.random()*(player2Damage-minDamage2)+minDamage2);
 
