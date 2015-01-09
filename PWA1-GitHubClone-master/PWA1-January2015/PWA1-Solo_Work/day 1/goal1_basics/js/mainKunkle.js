@@ -226,14 +226,14 @@
      */
     var myArr = ['bond', 007, function () {
     }, true];
-    console.log("index 0 ", [0]);
-    console.log("index 1 ", [1]);
-    console.log("index 2 ", [2]);
-    console.log("index 3 ", [3]);
-    document.write("<br>" + "index 0 " [0]);
-    document.write("<br>" + "index 1 " [1]);
-    document.write("<br>" + "index 2 " [2]);
-    document.write("<br>" + "index 3 " [3]);
+    console.log("index 0 ", myArr [0]);
+    console.log("index 1 ", myArr [1]);
+    console.log("index 2 ", myArr [2]);
+    console.log("index 3 ", myArr [3]);
+    document.write("<br>" + "index 0 " , myArr [0]);
+    document.write("<br>" + "index 1 " , myArr [1]);
+    document.write("<br>" + "index 2 " , myArr[2]);
+    document.write("<br>" + "index 3 " , myArr [3]);
 
 
     /*
@@ -277,7 +277,7 @@
     myArray[0] = "baseball";
     myArray[1] = "football";
     myArray[2] = "basketball";
-    alert(myArray[0] + [1] + [2]);
+    alert(myArray[0] + myArray[1] + myArray[2]);
     //alert(myArray);
 
 
@@ -315,7 +315,9 @@
      a true or false boolean
      - conditions can be used just about anywhere, not just in conditionals and loops
      */
-
+var myVar = 5 > 3; //true
+    console.log("is 5 greater than 3: ", myVar);
+    document.write("<br>" + "is 5 greater than 3: ", myVar);
 
     /*
      most common comparison operators:
@@ -332,6 +334,11 @@
      };
      */
 
+    if (5 > 3){
+        console.log("5 > 3, True"); //true
+        document.write("<br>" + "5 > 3, true");
+
+    };
 
     /*
      - a common mistake is to use the assignment operator  = instead of the ==
@@ -345,7 +352,19 @@
 
     // == performs a loose check of two values
 
-
+        if ("1" == 1){
+        console.log("1 == 1, True");
+        document.write("<br>" + "1 == 1, True");
+    };
+    if (1 == 1){
+        console.log("1 == 1, True");
+    };
+    if ("1" === 1){
+        console.log("1 === 1, False");
+    };
+    if ("1" !== 1){
+        console.log("1 !== 1, True");
+    };
 
 
     /* ==============================================================
@@ -359,12 +378,45 @@
 
      ================================================================
      */
-
+    if(a < b){
+        console.log("a is less than b");
+        document.write("<br>" + "a is less than b");
+    }else{
+        console.log("if-else the 'IF' statement is false");
+    };
 
     //if - else if - else (allows for multiple options)
+    if(a < b){
+        console.log("a is less than b");
+        document.write("<br>" + "a is less than b");
+    }else if(a < c){
+        console.log("a is less than c");
+        document.write("<br>" + "a is less than c");
+    }else if(a < d) {
+        console.log("a is less than d");
+        document.write("<br>" + "a is less than d");
+    }else{
+        console.log("if - else if: all other returned false ");
+        document.write("<br>" + "if - else if: all other returned false ");
+    };
 
 
     //nested conditional statement
+
+    if("a" === "a"){
+
+        if("b" === "b"){
+            console.log("If nested if-else / b === b: True");
+            document.write("<br>" + "If nested if-else / b === b: True");
+
+        }else{
+
+        };
+    }else{
+        console.log("nested conditional: 1st if returned false");
+        document.write("<br>" + "nested conditional: 1st if returned false");
+
+    };
 
 
     /* ==============================================================
@@ -384,9 +436,20 @@
      */
 
     //AND logical operator
+    if ( (1 === 1)&& ("hi" === "hi") ){
+        console.log("&& logical operator: both sides = true");
+        document.write("<br>" + "&& logical operator: both sides = true");
+    };
 
 
     //OR logical operator
+    if(!( 1 === 1 ) || ("hi" === "no" ) ){
+        console.log("! Not logical operator: left is true converted to NOT");
+        document.write("<br>" + "! Not logical operator: left is true converted to NOT");
+    }else{
+        console.log("! Not logical operator: both sides = false");
+        document.write("<br>" + "! Not logical operator:both sides = false");
+    };
 
 
     // ! NOT logical operator
@@ -406,6 +469,15 @@
      GOAL
      1. learn if - else
      ********************************************/
+    var weather = "Cloudy";
+
+    if (weather == "Sunny"){
+        bobsMood = "Happy";
+    }else{
+        bobsMood = "Sad";
+    }
+    console.log("If-else statement:" , bobsMood);
+    document.write("<br>" + "If-else statement:" , bobsMood);
 
 
     /*******************************************
@@ -423,6 +495,31 @@
      - else bobsMood = "sad"
      3.  console.log the results after each conditional
      ********************************************/
+    var waves =  10;
+    var weather = "Sunny";
+
+    if (weather == "Sunny"){
+        if(waves = 10){
+            bobsMood = "Pumped";
+        }else if( (waves <= 9) && (waves >=5) ){
+            bobsMood = "mellow";
+        }else{
+            bobsMood = "bummed";
+        }
+    }else if(weather === "Overcast") {
+        if (waves === 10) {
+            bobsMood = "JackedUP";
+        } else if ((waves <= 6) && (waves >= 3)) {
+            bobsMood = "totally bummed";
+        } else{
+            bobsMood = "not happy";
+        }
+    }else{
+        bobsMood = "sad";
+    }
+    console.log("bobsMood: " , bobsMood);
+    document.write("<br>" + "bobsMood: " , bobsMood);
+
 
 
     /*
@@ -444,6 +541,13 @@
      - ? = perform the next statement if true
      - : = false (perform the new statement after the :)
      */
+    var mood = (weather === "sunny" ? "happy" : "sad");
+    console.log("mood: " , mood);
+    document.write("<br>" + "mood:", mood);
+    var smile = true;
+    console.log("I am" + ( smile === true ? " happy" : " sad") + "!!");
+    document.write("<br>" + "I am" + ( smile === true ? "happy" : "sad") + "!!");
+
 
 
     /*******************************************
@@ -457,7 +561,10 @@
      - else student1 = 'sad'
      4.  console.log the results
      ********************************************/
-
+    var temp = 60;
+    var student1 = (weather === "sunny" ? "happy" : ((temp >= 80) ? "content" : "sad"));
+    console.log("nested ternery  weather:"+ student1);
+    document.write("<br>" + "nested ternary weather:"+ student1);
 
 
 // Functions: (definition, whitespace, invocation, arguments, returns)
@@ -501,7 +608,18 @@
 
      - type the below as an example
      functionName();
-     *****************************
+     *****************************/
+    //function literal - example
+    var myctr = 1;
+
+    var myCounter = function(){
+        myctr++;
+        console.log("counter =" , myctr);
+        document.write("<br>" + "counter =" , myctr);
+
+    };
+     myCounter();
+     myCounter();
 
 
 
@@ -553,6 +671,19 @@
      5.  second time: pass a 2 into the funciton as an argument
      6.  console.log the results
      ********************************************/
+    var myctr = 1;
+
+    var myCounter = function(newct){
+
+        myctr += newct;
+        console.log("counter =" , myctr);
+        document.write("<br>" + "counter =" , myctr);
+
+    };
+    myCounter(5);
+    myCounter(2);
+
+
 
 
     /*******************************************
@@ -580,6 +711,22 @@
      output the same info
      4.  console.log the results
      ********************************************/
+    var myctr = 1;
+
+    var myCounter = function(newct){
+
+        myctr += newct;
+        console.log("counter =" , myctr);
+        document.write("<br>" + "counter =" , myctr);
+        return myctr
+
+    };
+    console.log("counter =" , myctr);
+    var cnt = myCounter(5);
+    console.log("console = " , cnt);
+    document.write("<br>" + "console = " , cnt);
+    //myCounter(2);
+
 
 
     /*******************************************
@@ -591,4 +738,39 @@
      4. return Mood
      5. console.log the Results
      ********************************************/
+
+    var value2 =  10;
+    var value1 = "Sunny";
+
+
+    var moodFN = function(weather,waves)
+    {
+        if (weather == "Sunny"){
+            if(waves = 10){
+                bobsMood = "Pumped";
+            }else if( (waves <= 9) && (waves >=5) ){
+                bobsMood = "mellow";
+            }else{
+                bobsMood = "bummed";
+            }
+        }else if(weather === "Overcast")
+        {
+            if (waves === 10) {
+                bobsMood = "JackedUP";
+            } else if ((waves <= 6) && (waves >= 3)) {
+                bobsMood = "totally bummed";
+            } else{
+                bobsMood = "not happy";
+            }
+        }else{
+            bobsMood = "sad";
+        }
+        return bobsMood;
+    };
+    console.log("bobsMood: " , bobsMood);
+    document.write("<br>" + "bobsMood: " , bobsMood);
+    var moodtyp = moodFN(value1,value2);
+    console.log("mood is " , moodtyp);
+    document.write("<br>" + "mood is " , moodtyp);
+
 })();

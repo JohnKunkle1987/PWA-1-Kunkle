@@ -10,21 +10,21 @@
     console.log("FIGHT!!!");
 
     //player name
-    var playerOneName = "Spiderman";
-    var playerTwoName = "Batman";
+    var playerOneName = "Spiderman";    //player one assigned to Spiderman
+    var playerTwoName = "Batman";       //player two assigned to Batman
 
     //player damage
-    var player1Damage = 20;
-    var player2Damage = 20;
+    var player1Damage = 20;               //saying the player does 20 damage
+    var player2Damage = 20;              //saying the player does 20 damage
 
     //player health
-    var playerOneHealth = 100;
-    var playerTwoHealth = 100;
+    var playerOneHealth = 100;           //saying the player has 100 health
+    var playerTwoHealth = 100;           //saying the player has 100 health
 
     var round=0;
 
-    function fight(){
-        console.log ('in the fight function');
+    function fight(){                   //names the function Fight
+        console.log ('in the fight function');   //console.logs in the fight function
 
         alert(playerOneName+":"+playerOneHealth+"  *START*  "+playerTwoName+":"+playerTwoHealth);
 
