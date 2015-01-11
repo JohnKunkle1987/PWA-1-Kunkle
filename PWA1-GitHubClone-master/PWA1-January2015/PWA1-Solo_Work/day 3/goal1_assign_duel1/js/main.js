@@ -1,6 +1,6 @@
 /*
- Name: 
- Date: 
+ Name: John Kunkle
+ Date: 1/10/2015
  Assignment: Goal1: Assignment: Duel1
 */
 
@@ -23,7 +23,7 @@
 
     var round=0;
 
-    function fight(){                   //names the function Fight
+    function fight(){                  //names the function Fight
         console.log ('in the fight function');   //console.logs in the fight function
 
         alert(playerOneName+":"+playerOneHealth+"  *START*  "+playerTwoName+":"+playerTwoHealth);//sends alert with player
@@ -34,49 +34,49 @@
 
             var minDamage1 = player1Damage * .5;    //sets minDamage to playerdXdamage to # * .5
             var minDamage2 = player2Damage * .5;    //sets minDamage to playerdXdamage to # * .5
-            var f1 = Math.floor(Math.random()*(player1Damage-minDamage1)+minDamage1);
-            var f2 = Math.floor(Math.random()*(player2Damage-minDamage2)+minDamage2);
+            var f1 = Math.floor(Math.random()*(player1Damage-minDamage1)+minDamage1); //computes and rounds the player damage determined before
+            var f2 = Math.floor(Math.random()*(player2Damage-minDamage2)+minDamage2); ////computes and rounds the player damage determined before
 
             //inflict damage
-            playerOneHealth-=f1;
-            playerTwoHealth-=f2;
+            playerOneHealth-=f1;//a tracker for players health
+            playerTwoHealth-=f2;//a tracker for players health
 
-            console.log(playerOneName+":"+playerOneHealth+" "+playerTwoName+":"+playerTwoHealth);
+            console.log(playerOneName+":"+playerOneHealth+" "+playerTwoName+":"+playerTwoHealth);// logging the players health to the console
 
-            var results = winnerCheck();
-            console.log(results);
+            var results = winnerCheck();//sets a var for a function called winnercheck.
+            console.log(results);//checks to see who the winner is.
 
-            if (results === "no winner"){
-                round++;
-                alert(playerOneName+":"+playerOneHealth+"  *ROUND "+round+" OVER* "+playerTwoName+":"+playerTwoHealth);
-            }else{
-                alert(results);
-                break;
+            if (results === "no winner"){//if there is no winner
+                round++;//use var round + 1
+                alert(playerOneName+":"+playerOneHealth+"  *ROUND "+round+" OVER* "+playerTwoName+":"+playerTwoHealth);//alert each player with their health total.
+            }else{//if IF is not met do this
+                alert(results);//calls the results var
+                break;//line break
             };
 
         };
 
     };
 
-    function winnerCheck(){
-        console.log("in winnerCheck FN");
+    function winnerCheck(){//function winnerCheck
+        console.log("in winnerCheck FN");//console logs the result
 
-        var result="no winner";
+        var result="no winner";//Logs the result from function above
 
-        if (playerOneHealth<1 && playerTwoHealth<1){
-            result = "You Both Die";
-        } else if(playerOneHealth<1){
-            result =playerTwoName+" WINS!!!"
-        } else if(playerTwoHealth<1){
-            result =playerOneName+" WINS!!!"
+        if (playerOneHealth<1 && playerTwoHealth<1){//if each player has less than 1 health
+            result = "You Both Die"; //result changes based on checks
+        } else if(playerOneHealth<1){//if player one health is less than 1
+            result =playerTwoName+" WINS!!!"//player 2 wins
+        } else if(playerTwoHealth<1){//if player two health is less than 1
+            result =playerOneName+" WINS!!!"//player 1 wins
         };
 
-        return result;
+        return result;//return rsult of finction above
 
     };
 
     /*******  The program gets started below *******/
-    console.log('program starts')
+    console.log('program starts');// this logs the start of fight
     fight();
 
 })();
