@@ -1,4 +1,4 @@
-// 14 total errors
+// 14 total errors John Kunkle
 (function(){
 	
 	// Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
