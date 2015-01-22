@@ -936,5 +936,8 @@ document.write("<br>", '------For Loop ----------');
 	document.write("<br>", array1);
 
 
+/// Lab with Scott
+
+	cars={modle:"accord", make:"honda"};
 
 })();

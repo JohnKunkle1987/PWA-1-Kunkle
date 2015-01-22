@@ -53,7 +53,7 @@ function displayCar(car){ // function for displaying the car
 
 	console.log ( "'" +car.color + "'" +" Came from this array of choices: " , colors );
 	document.write ( "<br>" + "'" + car.color + "'" + " Came from this array of choices: " , colors );
-
+/*
 	console.log("MAKES has this many: "+ Object.keys(makes).length);
 	document.write ( "<br>"+"MAKES has this many: " +Object.keys(makes).length);
 
@@ -68,7 +68,7 @@ function displayCar(car){ // function for displaying the car
 
 	console.log ( "CONVERTIABLE has this many: " + Object.keys ( convertible ).length );
 	document.write ( "<br>" + "CONVERTIABLE has this many: " + Object.keys ( convertible ).length );
-
+*/
 }
 var cartoSell = makeCar(); // variable to create car
 displayCar(cartoSell);// function call to display car

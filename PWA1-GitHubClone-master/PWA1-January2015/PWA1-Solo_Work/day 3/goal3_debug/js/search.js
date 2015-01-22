@@ -10,7 +10,7 @@
 	var validate = function(query) { // a variable called validate that is function useing the parameters query
 
 		// Trim whitespace from start and end of search query
-		while (query.charAt(0) == " ") { //first part of the function it will run until something becomes true
+		while (query.charAt(0) === " ") { //first part of the function it will run until something becomes true
 			query = query.substring(1, query.length); // while query is equal to substring
 		}
 		while (query.charAt(query.length - 1) === "") { //another while loop that will continue until a condition is met
@@ -23,6 +23,7 @@
 
 			// (DO NOT FIX THE LINE DIRECTLY BELOW)
 			searchInput.focus();//i don't know what this does
+			return
 		}
 
 
@@ -44,13 +45,13 @@
 			// each db[i] is a single video item, each title ends with a pipe "|"
 			// save a lowercase variable of the video title
 			var dbTitleEnd = db[i].indexOf('|');//not sure whats this is doing It's a var called dbTitleEnd
-			var dbItem = db[i].toLowerCase().substring(0, dbTitleEnd);//changes something about dbItem
+			var dbitem = db[i].toLowerCase().substring(0, dbTitleEnd);//changes something about dbItem
 
-		}
+
 			// loop through the user's search query words
 			// save a lowercase variable of the search keyword
-			for(var ii=0, jj=queryArray.length; ii<jj; ii++) {//What is lowercase variable?
-				var qItem = queryArray[ii].toLowerCase();//changes the search to lower case so it can find it in the db
+			for (var ii = 0, jj = queryArray.length; ii < jj; ii++) {//What is lowercase variable?
+				var qitem = queryArray[ii].toLowerCase();//changes the search to lower case so it can find it in the db
 
 				// is the keyword anywhere in the video title?
 				// If a match is found, push full db[i] into results array
@@ -60,7 +61,7 @@
 				}
 
 			}
-		
+		}
 		results.sort();//sorts the result
 		
 		// Check that matches were found, and run output functions
